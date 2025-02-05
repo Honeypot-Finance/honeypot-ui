@@ -7,7 +7,7 @@ interface LoadingDisplayProps {
   showPedding?: boolean;
 }
 
-export default function LoadingDisplay({
+export function LoadingDisplay({
   loadingText = "Loading...",
   showRocket = true,
   showPedding = true,
