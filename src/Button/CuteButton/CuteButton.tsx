@@ -1,10 +1,7 @@
 import { cn } from "@nextui-org/react";
 import { Button as NextButton, ButtonProps } from "@nextui-org/react";
 import React from "react";
-
-interface CustomButtonProps extends ButtonProps {
-  styleMode?: "plain" | "primary";
-}
+import { CustomButtonProps } from "./type/CuteButton";
 
 export const CuteButton = React.forwardRef<
   HTMLButtonElement,

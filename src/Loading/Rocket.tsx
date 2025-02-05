@@ -1,3 +1,4 @@
+import React from "react";
 export const RocketSvg = ({ className }: { className?: string }) => {
   return (
     <svg

@@ -10,22 +10,36 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: "dist/index.cjs.js",
-        format: "cjs",
-        exports: "named",
-        sourcemap: true,
-      },
-      {
-        file: "dist/index.esm.js",
+        file: "dist/index.js",
         format: "esm",
         sourcemap: true,
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "@nextui-org/react": "NextUI",
+        },
+      },
+      {
+        file: "dist/index.cjs",
+        format: "cjs",
+        sourcemap: true,
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "@nextui-org/react": "NextUI",
+        },
+        exports: "named",
       },
     ],
-    external: ["react", "react-dom", "@nextui-org/react"], // Externalize dependencies
+    external: ["react", "react-dom", "@nextui-org/react"],
     plugins: [
       resolve(),
       commonjs(),
-      typescript(),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        declaration: true,
+        declarationDir: "./dist",
+      }),
       babel({
         babelHelpers: "bundled",
         extensions: [".ts", ".tsx"],

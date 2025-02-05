@@ -1,3 +1,4 @@
+import React from "react";
 import { PeddingSvg } from "./Pedding";
 import { RocketSvg } from "./Rocket";
 

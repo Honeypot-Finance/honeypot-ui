@@ -1,3 +1,4 @@
+import React from "react";
 import { cn } from "@nextui-org/theme";
 
 // TODO: merge rocket and pedding svg

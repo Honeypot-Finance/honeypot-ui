@@ -1,5 +1,5 @@
+import React, { ReactNode } from "react";
 import { cn } from "@nextui-org/theme";
-import { ReactNode } from "react";
 
 interface HoneyContainerProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ interface HoneyContainerProps {
   showBottomBorder?: boolean;
 }
 
-function CardContainer({
+export function CardContainer({
   children,
   className,
   bordered = true,
