@@ -6,7 +6,10 @@ interface CustomButtonProps extends ButtonProps {
   styleMode?: "plain" | "primary";
 }
 
-export const Button = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
+export const CuteButton = React.forwardRef<
+  HTMLButtonElement,
+  CustomButtonProps
+>(
   (
     { children, className, isLoading, styleMode = "primary", ...props },
     ref
@@ -32,4 +35,4 @@ export const Button = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
   }
 );
 
-export default Button;
+export default CuteButton;
